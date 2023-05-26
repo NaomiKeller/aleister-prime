@@ -1,0 +1,144 @@
+.hero-block {
+    width: -webkit-fill-available;
+	height: 100vh;
+	background-size: cover !important;
+	background-attachment: fixed !important;
+	position: relative;
+	overflow: hidden;
+	.heading-container {
+		padding-top: 45vh;
+	}
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes slideUp {
+		0% {
+			opacity: 0;
+			bottom: -25px;
+		}
+		100% {
+			opacity: 1;
+			bottom: 25px;
+		}
+	}
+	@keyframes slideDown {
+		0% {
+			top: -51px;
+		}
+		100% {
+			top: 10px;
+		}
+	}
+	h1 {
+		position: absolute;
+		margin: 0;
+		left: 0;
+		right: 0;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+		width: fit-content;
+		line-height: normal;
+		animation: 5s ease-in 0s 1 fadeIn;
+		transition: ease-in-out .3s;
+		pointer-events: none;
+		letter-spacing: 20px;
+		margin-left: 10px;
+		&.heading-mobile {
+			display: none;
+		}
+		@media (max-width: 1300px) {
+			&.heading {
+				transform: scale(0.8) translate(-63%, -65%);
+			}
+		}
+		@media (max-width: 1024px) {
+			&.heading {
+				transform: scale(0.6) translate(-83.4%, -85%);
+			}
+		}
+		@media (max-width: 730px) {
+			&.heading {
+				display: none;
+			}
+			&.heading-mobile {
+				display: block;
+				color: #aa0000;
+			}
+		}
+		&.heading-overlay {
+			pointer-events: none;
+		}
+	}
+	.item-container {
+		width: 40px;
+		text-align: right;
+	}
+	.social-links {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: fit-content;
+		bottom: 25px;
+		display: flex;
+		gap: 15px;
+		text-align: center;
+		animation: 1s ease-in-out 0s 1 slideUp;
+		.dashicons {
+			font-size: 40px;
+			min-width: fit-content;
+			transition: ease-in-out .3s;
+			transition-property: font-size color;
+			@media (max-width: 730px) {
+				font-size: 30px;
+			}
+			&.social-icon {
+				cursor: pointer;
+				&:hover {
+					color: #aa0000;
+					margin-top: -3px;
+				}
+			}
+		}
+		&.scrolled {
+			@media (min-width: 1280px) {
+				width: 1280px;
+				justify-content: right;
+			}
+			right: 0;
+			padding: 0;
+			position: fixed;
+			bottom: unset;
+			animation: .25s ease-in 0s 1 slideDown;
+			top: 10px;
+			z-index: 100;
+			gap: 6px;
+			.dashicons {
+				font-size: 33px;
+				transition: all ease-in-out .3s;
+				&.social-icon {
+					&:hover {
+						margin-top: 0px;
+					}
+				}
+			}
+			@media (max-width: 1280px) {
+				left: unset;
+				right: 20px;
+			}
+		}
+		a {
+			color: white;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.music-block {
+	.music-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-bottom: 250px;
+		gap: 20px;
+		@include media-breakpoint(max-767) {
+			padding-bottom: 126px;
+		}
+		h3 {
+			font-weight: 400;
+		}
+		.col {
+			width: calc(33% - 10px);
+			iframe {
+				height: 352px;
+				box-shadow: 3px 3px 15px rgba(0,0,0,.2)
+			}
+			@media (max-width: 1024px) {
+				width: calc(50% - 10px);
+			}
+			@media (max-width: 768px) {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"name": "aleister-prime",
+	"version": "1.0.0",
+	"description": "aleister-prime theme packages",
+	"main": "main.js",
+	"scripts": {
+		"build": "wp-scripts build --webpack-copy-php",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-copy-php"
+	},
+	"keywords": [
+		"wordpress",
+		"themes"
+	],
+	"author": "Multidots",
+	"license": "MIT",
+	"private": true,
+	"devDependencies": {
+		"@wordpress/scripts": "^24.6.0",
+		"@wordpress/stylelint-config": "^21.8.0",
+		"postcss": "^8.4.20",
+		"postcss-preset-env": "^7.8.3",
+		"postcss-sort-media-queries": "^4.3.0",
+		"react-sortable-hoc": "^2.0.0",
+		"array-move": "^4.0.0"
+	},
+	"dependencies": {
+		"react-sortable-select": "^1.4.0",
+		"sortablejs": "^1.15.0"
+	}
+}

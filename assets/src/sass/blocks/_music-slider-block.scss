@@ -1,0 +1,112 @@
+.music-slider-block {
+	padding-bottom: 250px;
+	@include media-breakpoint(max-767) {
+		padding-bottom: 126px;
+	}
+	.music__slider {
+		background: #ad0000;
+		margin: 0 auto;
+		padding: 40px 26px;
+		box-shadow: 15px 15px 0 white;
+		margin-right: 15px;
+		h3 {
+			font-weight: 400;
+		}
+		.col {
+			margin: 0 10px;
+		}
+		iframe {
+			height: 352px;
+		}
+		@include media-breakpoint(max-576) {
+			margin-right: 0;
+			box-shadow: none;
+			background: transparent;
+			padding: 0;
+		}
+	}
+	.slick-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 0;
+		height: 40px;
+		width: 40px;
+		background: white;
+		color: #121212;
+		border: none;
+		border-radius: 100%;
+		cursor: pointer;
+		transition: ease-in-out .3s;
+		z-index: 99;
+		box-shadow: 0 0 8px rgba(0,0,0,.4);
+		&:hover {
+			background: #121212;
+			color: white;
+		}
+		&:before {
+			font-family: 'Dashicons';
+			position: absolute;
+			height: 40px;
+			width: 40px;
+			top: 0;
+			font-size: 24px;
+			line-height: 40px;
+		}
+	}
+	.slick-next {
+		right: -9px;
+		@media (max-width: 500px) {
+			right: -9px
+		}
+		&:before {
+			content: "\f345";
+			left: 1px;
+		}
+	}
+	.slick-prev {
+		left: -9px;
+		@media (max-width: 500px) {
+			left: -9px
+		}
+		&:before {
+			content: "\f341";
+			left: -1px;
+		}
+	}
+	.slick-dots {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		gap: 15px;
+		margin-top: 17px;
+		button {
+			display: block;
+			font-size: 0;
+			border: none;
+			background: white;
+			height: 3px;
+			width: 20px;
+			transition: ease-in-out .3s;
+			&:focus-visible {
+				outline: none;
+			}
+		}
+		li {
+			height: 30px;
+			width: 20px;
+			&.slick-active {
+				button {
+					background: #161616;
+					@include media-breakpoint(max-576) {
+						background: #aa0000;
+					}
+				}
+			}
+		}
+	}
+}
