@@ -1,6 +1,6 @@
 # ALEISTER-PRIME
 
-WordPress Theme for [Multidots](https://www.multidots.com/)
+WordPress Theme
 
 ### Requirements
 
